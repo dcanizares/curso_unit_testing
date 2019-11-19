@@ -2,14 +2,15 @@ from abc import ABC, abstractmethod
 
 
 class Atacable(ABC):
+    _resistencia = None
+
     @abstractmethod
     def recibir_ataque(self, potencia):
         pass
 
     @property
-    @abstractmethod
     def resistencia(self):
-        pass
+        return self._resistencia
 
     def _validar_resistencia(self):
         if self._resistencia == 0:

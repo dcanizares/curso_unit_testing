@@ -11,10 +11,6 @@ class Fauno(Atacable, Atacante):
         self.__escudo = Escudo()
         self.__arma = Arma()
 
-    @property
-    def resistencia(self):
-        return self._resistencia
-
     def atacar(self, objetivo):
         self.__arma.atacar(objetivo)
 
